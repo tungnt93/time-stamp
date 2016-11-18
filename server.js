@@ -18,15 +18,17 @@ app.get('/:str', function (req, res) {
 		var timeUnix = Date.parse(str + " 00:00:00 GMT")/1000;
 		var timestamp = moment.unix(timeUnix).add(1, 'year').format('LL');
 		response = {
+			a: "aaa",
 			unix: timeUnix,
 			natural: timestamp
 		}
 		res.send(response);
 	}
-	else if(moment.unix(str)){
+	else if(moment.unix(str).add(1, 'year').format('LL') != "Invalid date"){
 		var timestamp = moment.unix(str).add(1, 'year').format('LL');
 		var timeUnix = Date.parse(timestamp)/1000;
 		response = {
+			b: "bbb",
 			unix: timeUnix,
 			natural: timestamp
 		}
