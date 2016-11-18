@@ -1,0 +1,36 @@
+<style type="text/css">
+	body{
+		margin: 20px 100px;
+	}
+	.wrapper{
+		font-size: 20px;
+		border-left: 5px solid #eee;
+		padding-left: 20px;
+		color: #444;
+	}
+	.stories{
+		margin-left: 20px;
+	}
+	span{
+		color: #c7254e;
+		font-size: 18px;
+	}
+</style>
+<html>
+	<body>
+		<h1>Timestamp Microservice</h1>
+		<div class="wrapper">
+			User stories:</br>
+			<div class="stories">
+				1) I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)</br>
+				2) If it does, it returns both the Unix timestamp and the natural language form of that date.</br>
+				3) If it does not contain a date or Unix timestamp, it returns null for those properties.</br>
+			</div>
+		</div>
+		<h2>Example usage:</h2>
+		<span>https://tungnt-time-stamp.herokuapp.com/December%2015,%202015</span></br>
+		<span>https://tungnt-time-stamp.herokuapp.com/1450137600</span>
+		<h2>Example output:</h2>
+		<span>{ "unix": 1450137600, "natural": "December 15, 2015" }</span>
+	</body>
+</html>
